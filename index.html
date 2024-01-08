@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Old Stairwell 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130313
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Global Paths Matching Algorithm</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Global Paths Matching Algorithm</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#" accesskey="1" title="">Homepage</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="page">
+		<div id="content">
+			<h2>Overview</h2>
+                        Given a graph G=(V,E), a matching M is set of edges without common vertices, i.e. the graph G=(V,M) has degree of at most one. 
+
+The Global Paths Algorithm (GPA), was proposed by Maue and Sanders in "Engineering Algorithms for Approximate Weighted Matching" (WEA'07) as a synthesis of Greedy and Path Growing algorithms by Drake et. al.
+The greedy algorithm sorts the edges by descending weight (or rating) and then scans them. 
+If an edge {u,v} and its end points are not matched yet, it is put into the matching. <br><br>
+
+Similar to the Greedy approach, GPA scans the edges in order of decreasing weight (or rating);
+but rather than immediately building a matching, it first constructs a collection of paths and even length cycles. To be more precise, these paths initially contain no edges.
+While scanning the edges, the set is extended by successively adding applicable edges. 
+An edge is called applicable if it connects two endpoints of different paths or the two endpoints of an odd length path. 
+Afterwards, optimal solutions/matchings are computed for each of these paths and cycles using dynamic programming. 
+Both algorithms achieve a half-approximation in the worst case, but empirically, GPA gives considerably better results. <br><br> 
+
+
+This is our implementation of the global paths matching algorithm. 
+The algorithm has been originally used withing the graph partitioning framework <a href="http://algo2.iti.kit.edu/documents/kahip/index.html">KaHIP</a>. We hope that the implementation of the algorithm will be of independant use. <br> <br>
+
+
+                        
+			<h2>Licence</h2>
+The program is licenced under GPL 3.0. 
+If you publish results using our algorithms, <b>please acknowledge</b> our work by quoting the following paper: <br><br>
+
+<b>@inproceedings{kaffpa,<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       author    = {P. Sanders and C. Schulz},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       title     = {{Engineering Multilevel Graph Partitioning Algorithms}},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       booktitle = {Proceedings of the 19th European Symposium on Algorithms},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       year      = {2011},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       pages     = {469--480},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       publisher = {Springer},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       series    = {LNCS},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       volume    = {6942},<br>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       isbn      = {978-3-642-23718-8}<br>
+}</b>
+<br><br>
+                        <p></p>
+			<h2>Download</h2>
+                        <ul>
+                                <li> <a href="http://algo2.iti.kit.edu/schulz/software_releases/GPAmatching_v1.00.tar.gz">GPAMatching_1.00.tar.gz</a> (or available on GitHub <a href="https://github.com/schulzchristian/GPAMatching">here</a>) 
+
+                        </ul>
+
+			<h2>Support</h2>
+                        <ul>
+                                <li> Write us an <a href="mailto:christian.schulz@univie.ac.at?subject=SupportRequest">email</a> if you need support!
+                                
+                                </a>
+
+
+                        </ul>
+
+
+	        </div>
+
+        </div>
+	<div id="footer">
+		<p>Copyright (c) 2013. Site maintained by Christian Schulz. All rights reserved. Initial release: 7. November 2013. See main site for impressum. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+</div>
+</body>
+</html>
